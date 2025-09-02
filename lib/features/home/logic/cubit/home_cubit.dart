@@ -8,7 +8,7 @@ import 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this._homeRepo) : super(HomeInitial());
 
-  final HomeRepo _homeRepo; 
+  final HomeRepo _homeRepo;
 
   Future<void> getMeals() async {
     emit(HomeLoading());
