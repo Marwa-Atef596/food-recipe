@@ -39,6 +39,7 @@ dependencies:
   pretty_dio_logger: ^1.4.0
   dartz: ^0.10.1
   flutter_native_splash: ^2.4.4
+  flutter_screenutil: ^5.9.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
