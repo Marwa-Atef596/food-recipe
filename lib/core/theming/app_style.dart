@@ -14,4 +14,9 @@ class AppStyles {
     color: ColorApp.maindark,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font18Darkbold = TextStyle(
+    fontSize: 18.sp,
+    color: ColorApp.maindark,
+    fontWeight: FontWeightHelper.bold,
+  );
 }

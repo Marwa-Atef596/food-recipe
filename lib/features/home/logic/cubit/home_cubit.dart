@@ -28,4 +28,22 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
+  Future<void> getCategory() async {
+    emit(HomeLoading());
+
+    final result = await _homeRepo.getCategory();
+    result.fold(
+      (failure) {
+        print("Repo error: ${failure.message}");
+        emit(HomeFailure(failure.message));
+      },
+      (categories) {
+        print("Meals fetched successfully: ${categories.length} items");
+        for (var m in categories) {
+          print(m.name);
+        }
+        emit(HomeCategorySuccess(categories));
+      },
+    );
+  }
 }
